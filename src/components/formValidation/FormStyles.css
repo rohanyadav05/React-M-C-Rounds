@@ -1,0 +1,32 @@
+.form-container {
+    display: flex;
+}
+
+.form-heading{
+    margin: 3px;
+    border: 2px solid black;
+    padding:  4px;
+    height: 20px;
+}
+
+.form-body{
+    height: 500px;
+    border: 3px solid gray;
+}
+.label-header{
+background-color: gray;
+width: 100px;
+height: 10px;
+margin: 40px;
+}
+
+.label-body {
+    background-color: aqua;
+    color: black;
+}
+.error-body{
+    color: red;
+    display: block;
+    font: small;
+    margin-left: 100px;
+}
