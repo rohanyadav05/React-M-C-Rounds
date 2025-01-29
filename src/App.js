@@ -1,5 +1,6 @@
-import CopyFeature from './components/copyFeature/CopyFeature';
-import FormValidation from './components/formValidation/FormValidation';
+import Find3rdLargestEle from "./components/arrayQuestions/Find3rdLargestEle";
+import UniqueElement from "./components/arrayQuestions/UniqueElement";
+import '../src/App.css';
 
 function App() {
   return (
@@ -7,8 +8,8 @@ function App() {
       <header className="App-header">
        Rohan's App
       </header>
-      {/* < FormValidation /> */}
-      <CopyFeature />
+      {/* <Find3rdLargestEle /> */}
+      <UniqueElement/>
     </div>
   );
 }
