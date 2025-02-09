@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;  /* Setting font family */
+  }
+  
+  header {
+    background-color: #333;  /* Dark background color for the navbar */
+    position: relative;  /* Ensures the navbar stays on top */
+    z-index: 100;  /* Makes sure the navbar stays above other elements */
+  }
+  
+  .navbar {
+    display: flex;  /* Makes navbar a flex container */
+    justify-content: space-between;  /* Spreads out items (logo and nav links) */
+    align-items: center;  /* Vertically center-aligns the items */
+    padding: 10px 20px;  /* Adds padding to the navbar */
+  }
+  
+  .navbar .logo a {
+    color: white;  /* Makes the logo text white */
+    font-size: 24px;  /* Increases font size of the logo */
+    text-decoration: none;  /* Removes underline from the link */
+  }
+  
+  .navbar .nav-links {
+    list-style: none;  /* Removes default bullet points from the list */
+    padding: 0;
+    margin: 0;
+    display: flex;  /* Horizontally aligns the navigation items */
+    transition: max-height 0.3s ease;  /* Smooth transition for the collapse/expand effect */
+    overflow: hidden;  /* Hides the items when the menu is collapsed */
+  }
+  
+  /* Navigation items (list items) styling */
+  .navbar .nav-links li {
+    margin-right: 20px;  /* Space between nav items */
+  }
+  
+  .navbar .nav-links li a {
+    color: white;  /* Makes the links white */
+    text-decoration: none;  /* Removes underline from the links */
+    font-size: 18px;  /* Adjust font size of links */
+  }
+  
+  /* Hamburger Menu - Hidden by default */
+  .hamburger {
+    display: none;  /* Initially hides the hamburger menu on desktop */
+    cursor: pointer;  /* Changes cursor to pointer when hovering */
+    flex-direction: column;  /* Stack the bars vertically */
+    gap: 5px;  /* Adds space between the bars */
+  }
+  
+  .hamburger .bar {
+    width: 30px;  /* Makes each bar 30px wide */
+    height: 4px;  /* Makes each bar 4px tall */
+    background-color: white;  /* Sets the color of the bars to white */
+    border-radius: 5px;  /* Rounds the corners of the bars */
+  }
+  
+  /* Mobile View (Small screens) */
+  @media (max-width: 768px) {
+    /* Changes the nav links layout to vertical and hides them initially */
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;  /* Sets the background to match the navbar */
+      position: absolute;  /* Positions the menu below the navbar */
+      top: 60px;  /* Makes the menu appear below the logo and navbar */
+      left: 0;
+      padding: 20px 0;
+      max-height: 0;  /* Collapses the menu by default */
+      overflow: hidden;  /* Hides any overflowed content */
+    }
+  
+    .nav-links li {
+      margin: 15px 0;  /* Adds vertical space between items */
+    }
+  
+    /* Displays the hamburger icon */
+    .hamburger {
+      display: flex;  /* Shows the hamburger icon only on small screens */
+    }
+  
+    /* Expands the menu when the "active" class is added */
+    .nav-links.active {
+      max-height: 500px;  /* Expands the menu to a specific height */
+    }
+  }
+  
+  /* Desktop View (Larger screens) */
+  @media (min-width: 769px) {
+    .nav-links {
+      display: flex;  /* Displays the nav links horizontally */
+      flex-direction: row;  /* Keeps the items in a row */
+    }
+  }
+  
