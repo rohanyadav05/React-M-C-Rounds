@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Profile from './formComponents/Profile'
 import Interests from './formComponents/Interests'
 import Settings from './formComponents/Settings'
-import '../formValidation/FormStyles.css';
+import './FormStyles.css';
 
 const FormValidation = () => {
 
