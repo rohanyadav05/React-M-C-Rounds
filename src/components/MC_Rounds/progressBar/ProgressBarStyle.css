@@ -1,0 +1,28 @@
+.bar-container {
+    width: 100%;
+    background-color: beige;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+.bar-body {
+    background-color: blueviolet;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    color: black;
+}
+
+.bar-body::before{
+    content: att(data-progress)"%";
+    color: blue;
+    position: absolute;
+    z-index: 1212;
+    font-weight: bold; 
+    top: 0;  /* Adjust the positioning of text */
+    left: 50%;  /* Center the text inside the bar */
+    transform: translateX(-50%);
+}

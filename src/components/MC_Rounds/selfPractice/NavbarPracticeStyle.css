@@ -1,0 +1,79 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+}
+
+/* Desktop Menu (Always Visible on Larger Screens) */
+.web {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.web li {
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Mobile Menu - Hidden by Default */
+.mob {
+    display: none;
+}
+
+/* Mobile View */
+@media (max-width: 756px) {
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .web {
+        display: none; /* Hide desktop menu on mobile */
+    }
+
+    .mob {
+        display: flex; /* Show mobile menu when hamburger is clicked */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .mob li {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+/* Reset the menu when expanding to Desktop */
+@media (min-width: 756px) {
+    .mob {
+        display: none; /* Hide mobile menu on larger screens */
+    }
+
+    .web {
+        display: flex; /* Ensure desktop menu is visible */
+    }
+}
