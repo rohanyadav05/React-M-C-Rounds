@@ -10,6 +10,10 @@ import ProgressBar from "./components/MC_Rounds/progressBar/ProgressBar";
 import IntervalInsertion from "./components/arrayQuestions/IntervalInsertion";
 import SearchBar from "./components/MC_Rounds/searchBar/SearchBar";
 import Pagination from "./components/MC_Rounds/pagination/Pagination";
+import LongestPalindromicSubstring from "./components/stringQues/LongestPalindromicSubstring";
+import ExtractAllNumbers from "./components/arrayQuestions/ExtractAllNumbers";
+import DeppCloneEx from "./components/ShallowDeepClone/DeppCloneEx";
+import GridLight from "./components/MC_Rounds/gridLights/GridLight";
 
 function App() {
   return (
@@ -27,8 +31,12 @@ function App() {
         <Counter />
       </CounterProvider> */}
       {/* <ProgressBar /> */}
-      <SearchBar />
-      <Pagination/>
+      {/* <SearchBar />
+      <Pagination/> */}
+      {/* <LongestPalindromicSubstring/> */}
+      {/* <ExtractAllNumbers /> */}
+      {/* <DeppCloneEx /> */}
+      <GridLight />
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.container-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-block{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+    border: 2px solid black;
+    padding: auto;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.grid-block-disabled{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+    border: 2px solid black;
+    padding: auto;
+    margin: 5px;
+    cursor: pointer;
+    visibility: hidden;
+    cursor:none;
+}
+
+
+.selected-box{
+    background-color: red;
+}
